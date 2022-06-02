@@ -8,6 +8,7 @@
 # Problema Proposto
 <div align="justify">
 Considerando nossos modelos de lista (i.e., linear e dinâmica), realize as solicitações de implementação a seguir, considerando para isso estruturar sua solução da seguinte forma: 
+  
   <p>i) Uma implementação por letra e; </p>
   <p>ii) Uma implementação magma que conecte todas as letras por um único menu para execução.</p>
 <ul style="none">
