@@ -11,7 +11,7 @@ void insertLista(Lista *l,Item item){
     l->cauda->prox=NULL;
 }
 void preencheLista(Lista *l){
-	char string[90]={'a','r','q','u','i','v','o','s','/'},arquivo[80];
+	char string[93]={'.','.','/','a','r','q','u','i','v','o','s','/'},arquivo[80];
 	printf("Qual o nome do arquivo da lista dos numeros? (Max 80)\n");
 	fgets(arquivo,80,stdin);
 	arquivo[strlen(arquivo)-1]='\0';
