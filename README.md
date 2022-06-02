@@ -3,7 +3,7 @@
 # Treinamento em Listas Pilhas e Filas Estáticas e Dinâmicas
 Repositório criado com o intuito de reunir todas as atividades da lista sobre Lista, Pilha e Fila passadas na disciplina de Algorítmo e Estrutura de Dados I do curso de Engenharia de Computação do CEFET-MG Campus V.
 
-# Colaboradores
+## Colaboradores
 
 <div>
 <p align="justify"> Thaissa Vitória</p>
