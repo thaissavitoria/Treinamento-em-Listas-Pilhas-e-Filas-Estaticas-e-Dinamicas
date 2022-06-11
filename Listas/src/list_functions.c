@@ -158,6 +158,8 @@ void uneListasContrarias(Lista *l1,Lista *l2,Lista *l3){
     printLista2(l3);
 }
 
+
+
 void uneListas(Lista *l1,Lista *l2,Lista *l3){
     Item item;
     while (l1->cabeca->prox!=NULL)
@@ -169,9 +171,19 @@ void uneListas(Lista *l1,Lista *l2,Lista *l3){
         insertLista(l3,item);
     }
     printLista2(l3);
+    Bloco *aux;
+    aux=l3->cabeca;
+    while (aux->prox!=NULL)
+    {
+        aux->prox->dado.distancia=DistanciaEuclidiana(aux->prox->dado.value[0],aux->prox->dado.value[1]);
+
+        aux=aux->prox;
+    }
+    
+
 }
-float DistanciaEuclidiana(int x1, int y1, int x2, int y2) {
+float DistanciaEuclidiana(int x, int y) {
 	float distancia;
-	distancia = sqrt((pow((x2 - x1), 2) + pow((y2 - y1), 2)));
+	distancia = sqrt((pow(x, 2) + pow(y, 2)));
 	return distancia;
 }

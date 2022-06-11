@@ -32,7 +32,10 @@ int main(){
 			preencheLista(&l2);
 			uneListasContrarias(&l1,&l2,&l3);
 		case 'd':
-
+			fgets(temp,80,stdin);
+			preencheLista(&l1);
+			preencheLista(&l2);
+			uneListas(&l1,&l2,&l3);
 			break;
 		case '0':
 			printf("Saindo\n");

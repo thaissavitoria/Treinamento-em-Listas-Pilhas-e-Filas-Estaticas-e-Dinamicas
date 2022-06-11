@@ -10,6 +10,7 @@
 typedef struct Bloco Bloco;
 typedef struct Item{
     int value[2];
+    int distancia;
 }Item;
 
 struct Bloco{
@@ -35,5 +36,6 @@ void listaRand();
 
 void uneListasContrarias(Lista *l1, Lista *l2,Lista *l3);
 
-float DistanciaEuclidiana(int x1, int y1, int x2, int y2) ;
+void uneListas(Lista *l1,Lista *l2,Lista *l3);
+float DistanciaEuclidiana(int x, int y) ;
 #endif
