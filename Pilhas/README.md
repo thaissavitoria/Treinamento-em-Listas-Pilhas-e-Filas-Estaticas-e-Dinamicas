@@ -84,11 +84,17 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 <p align="center">
 	<img src="img/Screenshot_1.png"/> 
 </p>
+
+- Caso opcao=2:
+  - teste
+  - teste2
+
 - Caso opcao=3:
   - A função *PreencheP(&p1)* é chamada, nela, a pilha dinâmica 1 é preenchida por valores alatórios de 0 a 99, até que atinja seu tamanho máximo,ou seja,20 posições; 
   - A pilha é imprimida;
   - A função *AplicaTotientePilha(&p1)* é chamada, nela, para cada valor da pilha, é calculado quantos primos entre si ele tem e imprime eles;
   - Sai do case;
+
 - Caso opcao=4:
   - Pede-se para que o usuário digitar um número incial do qual deseja saber o Fibonacci; 
   - Calcula-se e imprime-se o Fibonnaci desse número por meio da função *Fibonacci(num,&p2)*, nessa função, usando a própria estrutura pilha dinâmica e suas funções de POP e PUSH, é calculado a sequência desse número;
