@@ -54,6 +54,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
  <p></p>
 	
 - Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
+- A resolução consistiu em receber uma função matemática qualquer do usuário e empilhar cada termo (seja ele um número ou um operador matemático) em pilhas de seus respectivos tipos. 
 	
 <b>b)</b> Considerando a função elaborada no item (a), crite uma segunda função que apresente a operação matemática em notação prefixa e posfixa. Veja alguns exemplos na tabela abaixo (i.e., Tabela 1.)
   <p></p>
