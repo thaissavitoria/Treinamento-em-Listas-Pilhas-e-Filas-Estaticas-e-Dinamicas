@@ -75,6 +75,8 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 
  </div>
  </div>
+	
+- Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
 
 <b>c)</b> Elabore uma função que receba uma pilha P1 com 20 posições preenchidas por números inteiros aleatórios entre 1 e 99. Para cada número da pilha, utilize a função totiente de Euler para encontrar para esse número os co-primos. Mostre-os na tela como resultado de sua execução.
   <p></p>
