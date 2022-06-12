@@ -96,7 +96,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
   - Pergunta ao usuário se deseja saber o Fibonacci de outro número, se sim, ele digita 1, se não,0.   
     - Caso opcao=1:
       - Entra novamente na função *Fibonacci(num,&p2)* e compara-se se o número digitado é maior ou menor que o outro calculado:
-        - Se é menor,busca na Pilha o valor do Fibonacci dele, se maior, calcula-se seu Fibonacci partindo do ponto onde o último parou;         
+        - Se é menor,busca na Pilha o valor do Fibonacci dele, se maior, calcula-se seu Fibonacci partindo do ponto onde o último parou.Imprime-se o Fibonacci;         
     - Caso opcao=0:
       - Sai do loop e do case;    
 - Caso opcao=0:
