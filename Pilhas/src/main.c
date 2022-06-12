@@ -1,26 +1,15 @@
-#include "Pilha.h"
+#include "PilhaDinamica.h"
+#include "PilhaEstatica.h"
 
 int main()
 {
-	///Problema a
-	Pilha p1;
-	Pilha p2;
-	FPVazia(&p1);
-	FPVazia(&p2);
-
-	///Problema b
-	Pilha p3;
-	Pilha p4;
-	FPVazia(&p3);
-	FPVazia(&p4);
-
 	///Problema c
-	Pilha p5;
-	FPVazia(&p5);
+	PilhaDinamica p1;
+	FPVazia(&p1);
 
 	///Problema d
-	Pilha p6;
-	FPVazia(&p6);
+	PilhaDinamica p2;
+	FPVazia(&p2);
 
 	int prob;
 
@@ -39,7 +28,8 @@ int main()
 	switch (prob)
 	{
 	case 1:
-		
+	 	setbuf(stdin,NULL);
+		Verifica();
 		break;
 
 	case 2:
@@ -47,24 +37,24 @@ int main()
 		break;
 
 	case 3:
-		PreencheP(&p5);
+		PreencheP(&p1);
 
 		printf("\n................Imprimindo Pilha.............\n");
-		PImprime(&p5);
+		PImprime(&p1);
 
 		printf("\n................Calculando primos entre si de cada elemento da pilha.............\n");
-		AplicaTotientePilha(&p5);
+		AplicaTotientePilha(&p1);
 		
 		break;
 
 	case 4:
 		printf("\nDigite o número do qual deseja saber a sequência Fibonacci:\n");
 		scanf("%d",&num);
-		p6.maxnum=3;
-		Fibonacci(num,&p6);
+		p2.maxnum=3;
+		Fibonacci(num,&p2);
 
 		printf("\n................Imprimindo Pilha.............\n");
-		PImprime(&p6);
+		PImprime(&p2);
 
 		int op;
 
@@ -76,9 +66,9 @@ int main()
 			{
 				printf("\nDigite o número do qual deseja saber a sequência Fibonacci:\n");
 				scanf("%d",&num);
-				Fibonacci(num,&p6);
+				Fibonacci(num,&p2);
 				printf("\n................Imprimindo Pilha.............\n");
-				PImprime(&p6);
+				PImprime(&p2);
 			}
 		}while(op!=0);
 		break;
