@@ -92,7 +92,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
   - Sai do case;
 - Caso opcao=4:
   - Pede-se para que o usuário digitar um número incial do qual deseja saber o Fibonacci; 
-  - Calcula-se e imprime-se o Fibonnaci desse número por meio da função *Fibonacci(num,&p2)*,nessa função, usando a própria estrutura pilha dinaâmica e suas funções de POP e PUSH, é calculado a sequência desse número;
+  - Calcula-se e imprime-se o Fibonnaci desse número por meio da função *Fibonacci(num,&p2)*, nessa função, usando a própria estrutura pilha dinâmica e suas funções de POP e PUSH, é calculado a sequência desse número;
   - Pergunta ao usuário se deseja saber o Fibonacci de outro número, se sim, ele digita 1, se não,0.   
     - Caso opcao=1:
       - Entra novamente na função *Fibonacci(num,&p2)* e compara-se se o número digitado é maior ou menor que o outro calculado:
