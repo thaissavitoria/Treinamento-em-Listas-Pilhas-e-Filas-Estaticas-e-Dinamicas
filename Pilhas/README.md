@@ -5,9 +5,9 @@
 </a> 
 </div>
 
-<h4><i>Todos os problemas propostos foram feitos utilizando a estrutura de pilha como demonstrado abaixo:</i></h4>
+<h4><i>Todos os problemas propostos foram feitos utilizando a estrutura de pilha.</i></h4>
 
-## A Estrutura Pilha
+# Pilhas Lineares
 <div align="justify">
 A pilha possui uma regra básica que deve ser obedecida, essa se refere a forma como inserimos e removemos elementos dessa estrutura. Antes de iniciarmos essa discussão, observe um exemplo ilustrativo desse tipo de dados na figura abaixo.
 
@@ -23,8 +23,28 @@ Observe que nesse tipo de estrutura há apenas um <b>único ponteiro</b> chamado
 > 1. O último elemento que entra sempre será o primeiro a ser removido. 
 
 Como a pilha é definida a partir de um vetor, muitas das caracteristicas de implementação observadas no tipo lista são aproveitados para compor sua execução. A diferença está apenas na composição da regra de manipulação, o que as diferencia em termos de execução. 
-
 </div>
+
+# Pilhas Dinâmicas 
+<p align="justify">
+Para o desenvolvimento de um tipo pilha dinânico, precisamos reservar memória para alocar nossos blocos de dados. Além disso, precisamos criar um bloco chamado "cabeça" para que nossos apontadores possam existir e manipular corretamente as regras da estrutura que estamos tratando.
+</p>
+
+<p align="justify">
+Na pilha, é preciso definir apontadores para <b>fundo</b> e <b>topo</b> e esses são tratados da mesma forma que os ponteiros primeiro e ultimo de uma lista dinâmica [vide git](https://github.com/mpiress/dynamic_list). Também segue as mesmas regras de inserção e remoção de sua estrutura estática [vide git](https://github.com/mpiress/linear_stack). Vejamos uma representação gráfica da pilha dinâmico e como se comportam os blocos armazenados na memória.
+</p>
+
+<p align="center">
+	<img src="imgs/pilha.png"/> 
+</p>
+
+<p align="justify">
+Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, exceto por inverter a forma como os ponteiros de inicialização são manipulados. Uma vez que, a pilha tem como regra o último que entra é o primeiro a sair, (do inglês, Last In First Out - LIFO), a lógica de manipulação dos ponteiros deve ser modificada para se adaptar a essa regra. Dessa forma,  um novo bloco é inserido utilizando o ponteiro de topo e esse novo bloco apontará para o último já inserido. Note que, ao contrário de fazer o ponteiro de topo (ou último em lista) apontar para o próximo, faz-se o ponteiro de próximo do novo bloco apontar para o topo e só depois atualizaremos o topo para a posição de memória do novo bloco. Vejamos a representação das funções de inicialização (FPVazia), inserção (Push) e remoção (Pop) de uma pilha dinâmica.
+</p>
+
+<p align="center">
+	<img src="imgs/funcoes.png"/> 
+</p>
 
 # Problemas Propostos
 <div align="justify">
