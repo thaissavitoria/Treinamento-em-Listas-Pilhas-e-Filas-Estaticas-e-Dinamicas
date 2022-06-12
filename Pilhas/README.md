@@ -5,7 +5,7 @@
 </a> 
 </div>
 
-# Problema Proposto
+# Problemas Propostos
 <div align="justify">
 É de nosso conhecimento que a estrutura do tipo pilha define regras de manipulação que não podem ser modificadas e que essas são comumente citadas como ações de PUSH (empilhar) e POP (desempilhar). Sabendo-se disso e mediante as regras de desenvolvimento já apresentadas faça:
  <p></p>
@@ -52,6 +52,18 @@ Como a pilha é definida a partir de um vetor, muitas das caracteristicas de imp
 </div>
 
 # Algoritimo
+
+## Perguntas:
+
+<div align="justify">
+d)
+<dl>
+	<dt>Manter os cálculos em pilha pode ajudar a economizar computações?</dt>
+	<dd> Sim!Calculado o Fibonacci de um valor inicial n, se depois for necessário calcular o valor de um outro valor a pilha seria aproveitada, poupando assim a necessidade de fazer os cáculos desde o início novamente. Sendo que, para valores menores que n, basta achar na pilha o Fibonacci correspondente e, para valores maiores que n, basta continuar o calculo a partir do Fibonacci de n.</dd>
+	<dt>Quando seria melhor empregado?</dt>
+	<dd> Em uma situação em que todos os Fibonaccis a serem calculados fossem menor do que n, assim, o algoritmo precisaria realizar o Fibonacci apenas uma vez e depois só teria que encontrar o restante dos Fibonaccis na pilha.</dd>	
+</dl>
+</div>
 
 
 # Compilação e Execução
