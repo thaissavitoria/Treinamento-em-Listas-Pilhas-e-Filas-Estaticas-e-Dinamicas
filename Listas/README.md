@@ -22,11 +22,42 @@ Considerando nossos modelos de lista (i.e., linear e dinâmica), realize as soli
   </ul>
 </div>
 
-## A Estrutura Lista
+## Lógica
+O programa a seguir apresenta algoritmos baseados de: [Dynamic_List](https://github.com/mpiress/dynamic_list.git), [Linear_List](https://github.com/mpiress/linear_list.git) e [Insertion_Sort](https://github.com/mpiress/InsertionSort.git)      
+       
+1) Ao entrar no programa, entramos em um looping que contem o seguinte menu (a-Quantidade par e impar,b-Jogo randomico,c-Unir listas,d-Pares mais próximos,0-Sair), a cada iteração resetamos as listas utilizadas no programa         
+- Caso opcao=a:
+  - Encontra uma função *preencheLista(&l1)* que pega a lista de um arquivo de formato específico a partir do nome informado;      
+  - Pergunta ao usuário se deseja buscar a quantidade de pares e ímpares a partir de uma função recursiva (a) ou uma função não recursiva (b)     
+    - Caso opcao=a:
+      - Entra na função *countImpar(&l1)* com a opcao verdadeira e chama uma função *EvenNum(primeiro numero da lista)*:
+        - Se não está no final da lista verifica se é par, se sim retorna 1+ *EvenNum(proximo número)*, e soma um a um ponteiro de tamanho a cada iteração;     
+      - Com o número de pares calculados e do tamanho também, subtrai os pares do tamanho tendo assim os ímparees, e apresenta ao usuário;     
+    - Caso opcao=b:
+      - Percorre a lista verificando a paridade de cada item e somando a uma variável par e uma impar, e deposi aprensentando ao usuário;     
+- Caso opcao=b:
+  - Encontra a função *listaRand()* que preenche duas listas estáticas com três números randômicos cada e escolhe dois fatores também randômicos, todos os itens entre 1 e 13, depois soma cada item de cada lista e subtrai o fator da lista a cada item que ela possui, o programa diz qual lista possui maior soma no final;    
+- Caso opcao=c:
+  - Preenche duas listas assim como na opcao=a, e entra em uma função *uneListasContrarias(&l1,&l2,&l3)*:
+    - Existe um looping que percorre l1, a cada iteração existe um auxiliar que caminha por l2 até chegar no ultimo número, então preenche-se uma l3 com o primeiro número de l1 e o último de l2, a cada iteração a cabeça de l1 passa para o próximo número, e a cauda de l2 passa para o anterior;
+- Caso opcao=d:
+  - Preenche duas listas assim como na opcao=a, e entra em uma função *uneListas(&l1,&l2,&l3)*:
+    - Primeiro, de maneira similar a opcao=c, unimos as listas l1 e l2 só que não contrárias, alem de calcular a distancia euclidianas entre l1[x] e l2[x];     
+    - Depois, calculamos a distancia que cada par tem entre si, ordenamos a lista a partir de um *InsertionSort*, e perguntamos ao usuário quantos k pares mais próximos ele deseja saber, e apresentamos essa quantidade.      
 
+Obs.:    
+- O arquivo deve ser dado de maneira:
+>a<sub>1</sub><br>
+>a<sub>2</sub><br>
+>a<sub>3</sub><br>
+>a<sub>...</sub><br>
+>a<sub>n</sub><br>
+>
+>onde *a* é um inteiro
+- Para a opção c e d as listas devem possuir o mesmo tamanho       
+- Para a opção d, k deve ser menor que o tamanho da lista
 
-## Algoritimo
-
+# Exemplo de Execução
 
 # Compilação e Execução
 
