@@ -40,9 +40,19 @@ usuário considerando o maior valor de indexação como cabeça dessa ordem.
  Com relação às estruturas dinâmicas básicas de lista e pilha, há uma diferença sutil de construção que deve ser observado na fila, a ligação do último elemento inserido à "cabeça" da estrutura. Essa modificação fará com que a estrutura se comporte exatamente da mesma forma de sua variante estática,ou seja, de forma circular.
 </div>
 
-## Método da Bolha (Bubble Sort)
-
+## Método da Bolha 
 <p> O bubble sort ou método da bolha é um método de ordenação por flutuação simples de custo computacional quadrático que utiliza sucessívas comparações para a realização de ordenação. </p>
+
+<p> Em sua implementação, o vetor dado como entrada é percorrido inúmeras vezes e a cada passadagem é inserido (i.e., flutuado) para o fundo/fim do vetor o elemento de maior valor. Considerando sua forma de execução, pode-se observar que sua complexidade computacional o inviabiliza para grandes entradas. Em literatura, há certa divergência quanto ao tamanho máximo/ideal de entrada para sua aplicação, sendo essa definida entre 25 a 50 elementos. </p>
+
+<p> Considerando um pequento exemplo com um vetor de 5 posições, vejamos como seria uma única interação do método para a ordenação de valores inteiros.  </p>
+
+<p align="center">
+ <img src="img/bolha.png">
+</p>
+
+<p>Observe pela figura acima que a cada interação do algoritmo, apenas um elemento é colocado em ordem, o que exige muito trabalho durante o processo de composição da ordenação correta. Nesse processo, a cada interação o vetor é revisitado para os n - 1 elementos restantes, o que faz com que o método seja executado até que se tenha 2 elementos ainda não vizitados. </p>
+
 
 ## Algoritmo
 
@@ -52,18 +62,29 @@ usuário considerando o maior valor de indexação como cabeça dessa ordem.
 
 2 - Um menu aparece na tela, e nele, o usuário tem 3 opções: Inverter metade das filas (exercício 3a), Realizar um cálculo aos valores da fila e ordenar a fila baseado nele (exercício 3b e 3c) e por fim, sair do programa.
 
+<p align="center">
+ <img src="img/menu.png">
+</p>
+
 3 - Se solicitado para inverter metade das filas e conectá-las, o programa preenche duas fila com valores randômicos X vezes o tamanho da fila recebido como input pelo usuário.
 
 4 - Após as filas estarem completamente preenchidas, a função SwapFilas é chamada, e nela é passada as duas filas e o tamanho delas como parâmetro. A fila é percorrida até a metade e seus valores são permutados, assim conectando metade das listas.
 
 5 - Por fim, ambas as listas permutadas são mostradas na tela e o menu é chamado novamente para o usuário.
 
+<p align="center">
+ <img src="img/inversão.png">
+ </p>
+
 6 - Se solicitado para realizar um cálculo aos valores da fila e ordená-la, o programa preenche uma fila com valores randômicos X vezes o tamanho da fila recebido como input pelo usuário.
 
-7 - Após as filas estarem completamente preenchidas, a função MetodoBolhaInterativo é chamada, e nela é passada a fila como parâmeto. O método consiste em comparar o primeiro e o último valor da lista e caso o último valor seja menor, os valores são permutados. Nesse processo, a cada interação, a fila é revisitada para os n - 1 valores restantes, o que faz com que o método seja executado até que se tenha 2 elementos ainda não visitados. 
+7 - Após as filas estarem completamente preenchidas, a função MetodoBolhaInterativo é chamada, e nela é passada a fila como parâmeto. O método consiste em comparar o primeiro e o último valor da lista e caso o último valor seja menor, os valores são permutados. 
 
 8 - Por fim, a lista ordenada de forma descrescente é mostrada na tela, e o menu é chamado novamente para o usuário.
 
+<p align="center">
+ <img src="img/ordenação.png">
+</p>
 # Compilação e Execução
 
 O algoritmo de listas disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
