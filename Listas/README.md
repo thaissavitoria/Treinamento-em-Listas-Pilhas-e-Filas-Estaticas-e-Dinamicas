@@ -58,20 +58,62 @@ Obs.:
 - Para a opção d, k deve ser menor que o tamanho da lista
 
 # Exemplo de Execução
+Numeros.txt:
+> -10
+> -5
+> 8
+> 10
+> 7
+> 9
+> 3
+> 11
+> 13
+
+Numeros2.txt:
+> 1
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7
+> 8
+> 9
+
+Opcao a:
+<p align="center">
+	<img src="img/exemplo_exec_a.jpg"/> 
+</p> 
+
+Opcao b:
+<p align="center">
+	<img src="img/exemplo_exec_b.jpg"/> 
+</p> 
+
+Opcao c:
+<p align="center">
+	<img src="img/exemplo_exec_c.jpg"/> 
+</p> 
+
+Opcao d:
+<p align="center">
+	<img src="img/exemplo_exec_d.jpg"/> 
+</p> 
+
+Opcao 0:
+<p align="center">
+	<img src="img/exemplo_exec_0.jpg"/> 
+</p> 
 
 # Compilação e Execução
 
 O algoritmo de listas disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
-
-<div>
 
 | Comando                |  Função                                                                                           |
 | -----------------------| ------------------------------------------------------------------------------------------------- |
 |  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
 |  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
-
-</div>
 
 # Contatos
 
