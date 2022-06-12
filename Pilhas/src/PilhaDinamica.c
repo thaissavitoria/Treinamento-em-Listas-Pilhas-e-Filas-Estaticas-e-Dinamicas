@@ -29,7 +29,6 @@ void Pop(PilhaDinamica *p, Item *d)
 	*d = aux->data;
 	free(aux);
 }
-///Problema a
 
 ///Problema c
 void PreencheP(PilhaDinamica *p)
