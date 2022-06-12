@@ -5,7 +5,7 @@
 </a> 
 </div>
 
-<i>Todos os problemas propostos foram feitos utilizando a estrutura de pilha como demonstrado abaixo:</i>
+<h4><i>Todos os problemas propostos foram feitos utilizando a estrutura de pilha como demonstrado abaixo:</i></h4>
 
 ## A Estrutura Pilha
 <div align="justify">
