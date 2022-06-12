@@ -134,7 +134,7 @@ void listaRand(){
     }
     item1=(2+(rand()%11));
     item2=(2+(rand()%11));
-    printf("Numeros aleatorios escolhidos: %d, %d\n", item1,item2);
+    printf("\nNumeros aleatorios escolhidos: %d, %d\n", item1,item2);
     printf("{");
     for (int i = 0; i < 3; i++){
         printf("{%d,%d}",l1[i],l2[i]);
@@ -144,6 +144,7 @@ void listaRand(){
     printf("}\n");
     soma1-=3*item1;
     soma2-=3*item2;
+    printf("Soma Lista 1: %d\nSoma Lista 2: %d\n", soma1,soma2);
     if (soma1>soma2)
         printf("A lista 1 ganhou\n");
     else
