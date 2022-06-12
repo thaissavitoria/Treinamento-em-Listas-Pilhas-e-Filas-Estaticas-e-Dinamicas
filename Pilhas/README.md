@@ -51,14 +51,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 É de nosso conhecimento que a estrutura do tipo pilha define regras de manipulação que não podem ser modificadas e que essas são comumente citadas como ações de PUSH (empilhar) e POP (desempilhar). Sabendo-se disso e mediante as regras de desenvolvimento já apresentadas faça:
  <p></p>
 <b>a)</b> Escreva uma função que receba uma equação matemática qualquer e retorne duas pilhas. Uma contendo os operandos empilhados da esquerda para a direita e outra contendo os operadores seguindo mesma linha de leitura.
- <p></p>
-	
-- Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
-- A resolução consistiu em receber uma função matemática qualquer do usuário e empilhar cada termo (seja ele um número ou um operador matemático) em pilhas de seus respectivos tipos. A primeira pilha para operandos e a segunda para operadores, de modo que a ordem mostrada para o usuário é a mesma que ele a digitou.
-	
-<p align="center">
-	<img src="img/Screenshot_1.png"/> 
-</p>
+	<p></p>
 	
 <b>b)</b> Considerando a função elaborada no item (a), crite uma segunda função que apresente a operação matemática em notação prefixa e posfixa. Veja alguns exemplos na tabela abaixo (i.e., Tabela 1.)
   <p></p>
@@ -75,19 +68,48 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 
  </div>
  </div>
-	
-- Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
 
 <b>c)</b> Elabore uma função que receba uma pilha P1 com 20 posições preenchidas por números inteiros aleatórios entre 1 e 99. Para cada número da pilha, utilize a função totiente de Euler para encontrar para esse número os co-primos. Mostre-os na tela como resultado de sua execução.
   <p></p>
 <b>d)</b> Crie uma função para realizar o calculo de fibonacci para um valor de N. Contudo, utilize uma pilha para armazenar os pré resultados, utilizando-os para outros calculos sempre que possível. Para tanto, considere manter no topo da pilha o cálculo para o valor de (n-1). Crie uma forma de identificar para qual n-1 o valor foi cálculado para não utilizar valores incorretos para calculos longos. Feito isso responda: Manter os cálculos em pilha pode ajudar a economizar computações? Quando seria melhor empregado?
 </div>
 
+# Algoritmo
+1) No começo do programa, são criadas duas pilhas dinâmicas que serão usadas nos problemas c e d.
+2) Depois, entramos em um looping que contem o seguinte menu (1-Recebe uma equção matemática e retorna duas pilhas, uma com os operadores e outra com os operandos.,2-Apresenta um equação matemática em notação prefixa e posfixa,3-Mostra primos entre si de cada valor de uma pilha aleatoriamente preenchida com valores de 0 a 99,4-Fibonacci usando pilha,0-Sair)    
+
+- Caso opcao=1:
+  - Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
+  - A resolução consistiu em receber uma função matemática qualquer do usuário e empilhar cada termo (seja ele um número ou um operador matemático) em pilhas de seus respectivos tipos. A primeira pilha para operandos e a segunda para operadores, de modo que a ordem mostrada para o usuário é a mesma que ele a digitou.
+<p align="center">
+	<img src="img/Screenshot_1.png"/> 
+</p>
+
+- Caso opcao=3:
+  - A função *PreencheP(&p1)* é chamada, nela, a pilha dinâmica 1 é preenchida por valores alatórios de 0 a 99, até que atinja seu tamanho máximo,ou seja,20 posições; 
+  - A pilha é imprimida;
+  - A função *AplicaTotientePilha(&p1)* é chamada, nela, para cada valor da pilha, é calculado quantos primos entre si ele tem e imprime eles;
+  - Sai do case;
+- Caso opcao=4:
+  - Pede-se para que o usuário digitar um número incial do qual deseja saber o Fibonacci; 
+  - Calcula-se e imprime-se o Fibonnaci desse número por meio da função *Fibonacci(num,&p2)*,nessa função, usando a própria estrutura pilha dinaâmica e suas funções de POP e PUSH, é calculado a sequência desse número;
+  - Pergunta ao usuário se deseja saber o Fibonacci de outro número, se sim, ele digita 1, se não,0.   
+    - Caso opcao=1:
+      - Entra novamente na função *Fibonacci(num,&p2)* e compara-se se o número digitado é maior ou menor que o outro calculado:
+        - Se é menor,busca na Pilha o valor do Fibonacci dele, se maior, calcula-se seu Fibonacci partindo do ponto onde o último parou;         
+    - Caso opcao=0:
+      - Sai do loop e do case;    
+- Caso opcao=0:
+  - Sai do programa e exibe-se uma mensagem de agradecimento; 
+
+## Perguntas:
+
 <div align="justify">
+d)
 <dl>
-	<dt> Manter os cálculos em pilha pode ajudar a economizar computações?</dt>
-	<dd> Sim! Calculado o Fibonacci de um valor inicial n, se depois for necessário calcular o valor de um outro valor a pilha seria aproveitada, poupando assim a necessidade de fazer os cáculos desde o início novamente. Sendo que, para valores menores que n, basta achar na pilha o Fibonacci correspondente e, para valores maiores que n, basta continuar o calculo a partir do Fibonacci de n.</dd>
-	 <dt>Quando seria melhor empregado?</dt>
+	<dt>Manter os cálculos em pilha pode ajudar a economizar computações?</dt>
+	<dd> Sim!Calculado o Fibonacci de um valor inicial n, se depois for necessário calcular o valor de um outro valor a pilha seria aproveitada, poupando assim a necessidade de fazer os cáculos desde o início novamente. Sendo que, para valores menores que n, basta achar na pilha o Fibonacci correspondente e, para valores maiores que n, basta continuar o calculo a partir do Fibonacci de n.</dd>
+	<dt>Quando seria melhor empregado?</dt>
 	<dd> Em uma situação em que todos os Fibonaccis a serem calculados fossem menor do que n, assim, o algoritmo precisaria realizar o Fibonacci apenas uma vez e depois só teria que encontrar o restante dos Fibonaccis na pilha.</dd>	
 </dl>
 </div>
