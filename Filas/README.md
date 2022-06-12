@@ -85,6 +85,7 @@ usuário considerando o maior valor de indexação como cabeça dessa ordem.
 <p align="center">
  <img src="img/ordenação.png">
 </p>
+
 # Compilação e Execução
 
 O algoritmo de listas disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
