@@ -18,7 +18,7 @@ int main()
 
 	do{
 	printf("\nQual problema deseja testar? (para sair do programa, digite '0')");
-	printf("\n\t1 - Recebe uma equação matemática e retorna duas pilhas.");
+	printf("\n\t1 - Recebe uma equação matemática e retorna duas pilhas, uma com os operadores e outra com os operandos.");
 	printf("\n\t2 - Apresenta uma operação matemática em notação prefixa e posfixa.");
 	printf("\n\t3 - Mostra primos entre si de cada valor de uma pilha aleatoriamente preenchida com valores de 0 a 99.");
 	printf("\n\t4 - Fibonacci usando pilha.\n");
