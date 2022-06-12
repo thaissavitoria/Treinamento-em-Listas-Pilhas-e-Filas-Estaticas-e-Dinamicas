@@ -15,7 +15,7 @@ seguintes problemas:</p>
 e ligue as metadas para compor duas novas filas, as quais devem ser retornadas para o
 usuário. Tais filas devem ser definidas como dinâmicas. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Escreva uma função que aplica uma equação matemática qualquer aos n  ̃umeros de uma
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Escreva uma função que aplica uma equação matemática qualquer aos números de uma
 fila. Essa equação tem por objetivo produzir um indexador para a fila dada como entrada,
 logo, precisa ser retornado junto com a fila para o usuário.
 
