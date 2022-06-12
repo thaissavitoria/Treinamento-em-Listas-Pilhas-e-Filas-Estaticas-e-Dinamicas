@@ -8,7 +8,7 @@ int main(){
 		FLVazia(&l1);
 		FLVazia(&l2);
 		FLVazia(&l3);
-		printf("O que deseja fazer?\n\ta-Quantidade par e impar\n\tb-Jogo randomico\n\tc-Unir listas\n\t0-Sair\n");
+		printf("O que deseja fazer?\n\ta-Quantidade par e impar\n\tb-Jogo randomico\n\tc-Unir listas\n\td-Pares mais próximos\n\t0-Sair\n");
 		scanf(" %c",&opcao);
 		switch (opcao)
 		{
@@ -31,6 +31,7 @@ int main(){
 			preencheLista(&l1);
 			preencheLista(&l2);
 			uneListasContrarias(&l1,&l2,&l3);
+			break;
 		case 'd':
 			fgets(temp,80,stdin);
 			preencheLista(&l1);

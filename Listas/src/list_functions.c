@@ -10,6 +10,17 @@ void insertLista(Lista *l,Item item){
     l->cauda->dado=item;
     l->cauda->prox=NULL;
 }
+void FLVaziaProximos(ListaProximos *l){
+    l->cabeca=(BlocoProximos*)malloc(sizeof(BlocoProximos));
+    l->cauda=l->cabeca;
+    l->cauda->prox=NULL;
+}
+void insertListaProx(ListaProximos *l,ItemProximos item){
+    l->cauda->prox=(BlocoProximos*)malloc(sizeof(BlocoProximos));
+    l->cauda=l->cauda->prox;
+    l->cauda->dado=item;
+    l->cauda->prox=NULL;
+}
 void preencheLista(Lista *l){
 	char string[93]={'.','.','/','a','r','q','u','i','v','o','s','/'},arquivo[80];
 	printf("Qual o nome do arquivo da lista dos numeros? (Max 80)\n");
@@ -161,29 +172,64 @@ void uneListasContrarias(Lista *l1,Lista *l2,Lista *l3){
 
 
 void uneListas(Lista *l1,Lista *l2,Lista *l3){
+    int k;
     Item item;
+    Bloco *aux;
+    BlocoProximos *auxi, *auxj;
+    ListaProximos newList;
+    ItemProximos percorre;
+    FLVaziaProximos(&newList);
     while (l1->cabeca->prox!=NULL)
     {
         item.value[0]=l1->cabeca->prox->dado.value[0];
         item.value[1]=l2->cabeca->prox->dado.value[0];
         l1->cabeca=l1->cabeca->prox;
         l2->cabeca=l2->cabeca->prox;
+        item.distancia=DistanciaEuclidiana(item.value[0],item.value[1]);
         insertLista(l3,item);
     }
-    printLista2(l3);
-    Bloco *aux;
     aux=l3->cabeca;
-    while (aux->prox!=NULL)
+    while (aux->prox->prox!=NULL)
     {
-        aux->prox->dado.distancia=DistanciaEuclidiana(aux->prox->dado.value[0],aux->prox->dado.value[1]);
-
+        percorre.pares[0]=aux->prox->dado;
+        percorre.pares[1]=aux->prox->prox->dado;
+        percorre.distancia=fabs(percorre.pares[0].distancia-percorre.pares[1].distancia);
+        insertListaProx(&newList,percorre);
         aux=aux->prox;
     }
-    
-
+    auxi=newList.cabeca->prox->prox;
+    while(auxi!=NULL){
+        auxj=CaminharAteJ(&newList,auxi);
+        while(auxj!=newList.cabeca && auxj->prox->dado.distancia < auxj->dado.distancia){
+            swap(auxj->prox,auxj);
+            auxj=CaminharAteJ(&newList,auxj);
+        }
+        auxi=auxi->prox;
+	}
+    printf("Quantos pares mais proximos deseja pegar?\n");
+	scanf("%d", &k);
+    auxi=newList.cabeca;
+    for (int i = 0; i < k; i++)
+    {
+        printf("Par 1:{%d, %d}\t Par 2:{%d, %d}\t Dist:%.2f\n",auxi->prox->dado.pares[0].value[0],auxi->prox->dado.pares[0].value[1],   auxi->prox->dado.pares[1].value[0],auxi->prox->dado.pares[1].value[1], auxi->prox->dado.distancia);
+        auxi=auxi->prox;
+    }
 }
 float DistanciaEuclidiana(int x, int y) {
 	float distancia;
 	distancia = sqrt((pow(x, 2) + pow(y, 2)));
 	return distancia;
+}
+BlocoProximos* CaminharAteJ(ListaProximos* lista,BlocoProximos *auxj){
+	BlocoProximos* aux;
+    aux=lista->cabeca;
+	while(aux->prox!=auxj)
+		aux=aux->prox;
+	return aux;
+}
+void swap(BlocoProximos* a,BlocoProximos* b){
+	ItemProximos aux;
+    aux=a->dado;
+	a->dado=b->dado;
+	b->dado=aux;
 }
