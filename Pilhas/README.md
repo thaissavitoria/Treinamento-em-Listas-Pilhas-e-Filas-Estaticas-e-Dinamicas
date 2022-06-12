@@ -35,7 +35,7 @@ Na pilha, é preciso definir apontadores para <b>fundo</b> e <b>topo</b> e esses
 </p>
 
 <p align="center">
-	<img src="imgs/pilha.png"/> 
+	<img src="img/pilha2.png"/> 
 </p>
 
 <p align="justify">
@@ -43,7 +43,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 </p>
 
 <p align="center">
-	<img src="imgs/funcoes.png"/> 
+	<img src="img/funcoes.png"/> 
 </p>
 
 # Problemas Propostos
