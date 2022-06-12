@@ -31,7 +31,7 @@ usuário considerando o maior valor de indexação como cabeça dessa ordem.
 
 <div align="center">
  <p> </p>
- <img src="i[mg/fila.png](https://github.com/thaissavitoria/Treinamento-em-Listas-Pilhas-e-Filas-Estaticas-e-Dinamicas/blob/main/Filas/img/fila.png)" alt=RepresentaçãoFila>
+ <img src="img/fila.png" alt=RepresentaçãoFila>
  <p> </p>
 </div>
 
