@@ -51,7 +51,7 @@ Como a pilha é definida a partir de um vetor, muitas das caracteristicas de imp
 
 </div>
 
-# Algoritimo
+# Algoritmo
 
 ## Perguntas:
 
