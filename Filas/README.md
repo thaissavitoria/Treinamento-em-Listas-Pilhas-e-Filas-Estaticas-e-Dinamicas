@@ -40,7 +40,7 @@ usuário considerando o maior valor de indexação como cabeça dessa ordem.
  Com relação às estruturas dinâmicas básicas de lista e pilha, há uma diferença sutil de construção que deve ser observado na fila, a ligação do último elemento inserido à "cabeça" da estrutura. Essa modificação fará com que a estrutura se comporte exatamente da mesma forma de sua variante estática,ou seja, de forma circular.
 </div>
 
-## Algoritimo
+## Algoritmo
 
 <p> O problema foi desenvolvido da seguinte maneira: </p>
 
