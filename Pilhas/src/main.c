@@ -22,6 +22,7 @@ int main()
 	printf("\n\t2 - Apresenta uma operação matemática em notação prefixa e posfixa.");
 	printf("\n\t3 - Mostra primos entre si de cada valor de uma pilha aleatoriamente preenchida com valores de 0 a 99.");
 	printf("\n\t4 - Fibonacci usando pilha.\n");
+	printf("\n\t0 - Sair.\n");
 	printf("\nDigite a opção que deseja: ");
 	scanf("%d",&prob);
 
