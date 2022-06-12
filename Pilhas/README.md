@@ -9,7 +9,7 @@
 
 ## A Estrutura Pilha
 <div align="justify">
-A pilha possue uma regra básica que deve ser obedecida, essa se refere a forma como inserimos e removemos elementos dessa estrutura. Antes de iniciarmos essa discussão, observe um exemplo ilustrativo desse tipo de dados na figura abaixo.
+A pilha possui uma regra básica que deve ser obedecida, essa se refere a forma como inserimos e removemos elementos dessa estrutura. Antes de iniciarmos essa discussão, observe um exemplo ilustrativo desse tipo de dados na figura abaixo.
 
 <div align="center">
 	<p> </p>
