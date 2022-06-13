@@ -3,6 +3,11 @@
 
 int main()
 {
+
+	//Problema b
+	int j;
+	char infixo[20], posfixo[20] = "", prefixo[20] = "";
+
 	///Problema c
 	PilhaDinamica p1;
 
@@ -32,7 +37,17 @@ int main()
 		break;
 
 	case 2:
-		
+		setbuf(stdin,NULL);
+		Posfixo(infixo, posfixo);
+		infixo[strlen(infixo) - 1] = '\0';
+
+		j = Prefixo(infixo, prefixo);
+
+		infixo[strlen(infixo) - 1] = '\0';
+
+		result2(prefixo, j);
+		result(posfixo);
+		break;
 		break;
 
 	case 3:
