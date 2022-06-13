@@ -96,9 +96,9 @@ void AplicaTotientePilha(PilhaDinamica *p)
 
 void Fibonacci(int num,PilhaDinamica*p)
 {
-	Item num1,num2,soma;
+	Item num1,num2,soma,d;
 
-	if((p->maxnum)==3)
+	if((p->maxnum)==2)
 	{
 		num1.value=1;
 		num2.value=1;
@@ -106,8 +106,6 @@ void Fibonacci(int num,PilhaDinamica*p)
 		Push(p,num1);
 		Push(p,num2);
 	}
-
-	Item d;
 
 	if(p->maxnum<num)
 	{
