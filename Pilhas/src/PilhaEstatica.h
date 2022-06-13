@@ -10,34 +10,21 @@
 #define TAM 100
 
 
-typedef struct Item3 {
-    int val3;
-} Item3;
+typedef struct ItemEst {
+    int val;
+} ItemEst;
 
-typedef struct Pilha3 {
-    Item3 vet3[MAXTAM];
-    int top3;
-    int base3;
-} Pilha3;
+typedef struct PilhaEst {
+    ItemEst vet[MAXTAM];
+    int top;
+    int base;
+} PilhaEst;
 
-void FPVazia3(Pilha3 *p3);
-void PUSH3(Pilha3 *p3, Item3 d3);
-void PImprime3(Pilha3 *p3);
+void FPEVazia(PilhaEst *p3);
+void PUSHE(PilhaEst *p3, ItemEst d3);
+void PImprimeI(PilhaEst *p3);
+void PImprimeO(PilhaEst *p3);
 
-
-typedef struct Item4 {
-    int val4;
-} Item4;
-
-typedef struct Pilha4 {
-    Item4 vet4[MAXTAM];
-    int top4;
-    int base4;
-} Pilha4;
-
-void FPVazia4(Pilha4 *p4);
-void PUSH4(Pilha4 *p4, Item4 d4);
-void PImprime4(Pilha4 *p4);
 
 void Verifica();
 

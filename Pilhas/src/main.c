@@ -78,6 +78,5 @@ int main()
 
 	printf("\nObrigada por utilizar o programa! :)\n");
 
-
 	return 0;
 }
