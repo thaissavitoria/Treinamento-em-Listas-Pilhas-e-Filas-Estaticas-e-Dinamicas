@@ -87,6 +87,8 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 
 - Caso opcao=2:
 	- Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
+	- A ordem dos operadores na expressão diz a ordem em que eles vão ser executados.
+	- Durante o processo de conversão, os caracteres da expressão infixa são processados da esquerda para a direita. Quando operadores com maior prioridade são vistos, esses são empilhados de modo a ocupar o topo da pilha. Eles devem permanecer na pilha até aparecer na entrada um operador de prioridade menor ou igual. Nesse caso, não há porque postergar a sua execução, e o operador deve ser impresso imediatamente na saída.
   <p align="center">
 	<img src="img/Screenshot_4.png"/> 
 </p>
