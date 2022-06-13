@@ -86,8 +86,9 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 </p>
 
 - Caso opcao=2:
-  - teste
-  - teste2
+  <p align="center">
+	<img src="img/Screenshot_4.png"/> 
+</p>
 
 - Caso opcao=3:
   - A função *PreencheP(&p1)* é chamada, nela, a pilha dinâmica 1 é preenchida por valores alatórios de 0 a 99, até que atinja seu tamanho máximo,ou seja,20 posições; 
