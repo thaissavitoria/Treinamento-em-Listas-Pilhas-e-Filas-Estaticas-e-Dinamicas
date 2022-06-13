@@ -97,13 +97,15 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 	<p align="center">Exemplo de pilha gerada aleatoriamente</p>
 </p>
  
- - A função *AplicaTotientePilha(&p1)* é chamada, nela, para cada valor da pilha, é calculado quantos primos entre si ele tem e imprime eles;
+-        
+	
+  - A função *AplicaTotientePilha(&p1)* é chamada, nela, para cada valor da pilha, é calculado quantos primos entre si ele tem e imprime eles;
   <p align="center">
 	<img src="img/Screenshot_3.png"/>
 	<p align="center">Parte dos primos entre si da pilha gerada aleatoriamente</p>
 	</p>
  
- - Sai do case;
+  - Sai do case;
 
 - Caso opcao=4:
   - Pede-se para que o usuário digitar um número incial do qual deseja saber o Fibonacci; 
