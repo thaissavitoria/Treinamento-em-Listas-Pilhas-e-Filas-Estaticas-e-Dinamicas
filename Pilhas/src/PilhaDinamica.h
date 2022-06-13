@@ -29,7 +29,6 @@ struct PilhaDinamica
 {
     Block *base;
     Block *top; 
-    int maxnum;
 };
 
 

@@ -8,6 +8,7 @@ int main()
 
 	///Problema d
 	PilhaDinamica p2;
+	FPVazia(&p2);
 
 	int prob;
 
@@ -47,10 +48,8 @@ int main()
 		break;
 
 	case 4:
-		FPVazia(&p2);
 		printf("\nDigite o número do qual deseja saber a sequência Fibonacci:\n");
 		scanf("%d",&num);
-		p2.maxnum=2;
 		Fibonacci(num,&p2);
 
 		int op;

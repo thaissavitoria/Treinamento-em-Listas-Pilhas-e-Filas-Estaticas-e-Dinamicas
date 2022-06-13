@@ -1,7 +1,8 @@
 #include "PilhaDinamica.h"
-
+int maxnum;
 void FPVazia(PilhaDinamica *p)
 {
+	maxnum=2;
 	p->base = (Block *)malloc(sizeof(Block));
 	p->top = p->base;
 	p->base->prox = NULL;
@@ -98,7 +99,7 @@ void Fibonacci(int num,PilhaDinamica*p)
 {
 	Item num1,num2,soma,d;
 
-	if((p->maxnum)==2)
+	if((maxnum)==2)
 	{
 		num1.value=1;
 		num2.value=1;
@@ -107,9 +108,9 @@ void Fibonacci(int num,PilhaDinamica*p)
 		Push(p,num2);
 	}
 
-	if(p->maxnum<num)
+	if(maxnum<num)
 	{
-		for(int i=p->maxnum;i<num;i++)
+		for(int i=maxnum;i<num;i++)
 		{
 			num2.value=p->top->data.value;
 			Pop(p,&d);
@@ -125,7 +126,7 @@ void Fibonacci(int num,PilhaDinamica*p)
 		}
 		printf("\n........Imprimindo a sequência de Fibonnaci do número %d............\n",num);
 		PImprime(p);
-		p->maxnum=num;
+		maxnum=num;
 	}
 	else
 	{
@@ -137,7 +138,7 @@ void ImprimePMenor(PilhaDinamica*p,int num)
 {
 	Block *aux;
 	int veri;
-	veri=p->maxnum;
+	veri=maxnum;
 
 	aux = p->top;
 
