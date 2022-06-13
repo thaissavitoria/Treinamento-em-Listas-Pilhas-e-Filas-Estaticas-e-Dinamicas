@@ -86,6 +86,7 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
 </p>
 
 - Caso opcao=2:
+	- Neste problema a estrutura utlizada foi uma pilha linear por ser mais fácil de implementar e porque o problema não necessitava de grandes implementações mais complexas como alocação de memória.
   <p align="center">
 	<img src="img/Screenshot_4.png"/> 
 </p>
