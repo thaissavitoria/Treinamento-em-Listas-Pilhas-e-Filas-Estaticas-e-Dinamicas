@@ -112,9 +112,9 @@ Em linhas gerais, a estrutura pilha é muito semelhante a uma lista dinâmica, e
         - Se é menor,busca na Pilha o valor do Fibonacci dele, se maior, calcula-se seu Fibonacci partindo do ponto onde o último parou.Imprime-se o Fibonacci;         
     - Caso opcao=0:
       - Sai do loop e do case;    
-    >*Observação:* 
+ >*Observação:* 
  > - O tamanho máximo do tipo int deve ser respeitado.
->
+ >
 - Caso opcao=0:
   - Sai do programa e exibe-se uma mensagem de agradecimento; 
 
