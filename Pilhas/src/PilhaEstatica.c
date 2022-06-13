@@ -1,46 +1,30 @@
 #include "PilhaEstatica.h"
 
-void FPVazia3(Pilha3 *p3) {
-    p3->top3 = 0;
-    p3->base3 = 0;
+void FPEVazia(PilhaEst *p3) {
+    p3->top = 0;
+    p3->base = 0;
 }
 
-void PUSH3(Pilha3 *p3, Item3 d3) {
-    if (p3->top3 >= MAXTAM) {
+void PUSHE(PilhaEst *p3, ItemEst d3) {
+    if (p3->top >= MAXTAM) {
         printf("PILHA CHEIA!\n");
     } else {
-        p3->vet3[p3->top3] = d3;
-        p3->top3++;
+        p3->vet[p3->top] = d3;
+        p3->top++;
     }
 }
 
-void PImprime3(Pilha3 *p3) {
+void PImprimeI(PilhaEst *p3) {
     printf("Operandos:\n");
-    for (int i = p3->base3; i <= p3->top3-1; i++)
-        printf("%d\n", p3->vet3[i].val3);
+    for (int i = p3->base; i <= p3->top-1; i++)
+        printf("%d\n", p3->vet[i].val);
     printf("\n");
 }
 
-
-
-void FPVazia4(Pilha4 *p4) {
-    p4->top4 = 0;
-    p4->base4 = 0;
-}
-
-void PUSH4(Pilha4 *p4, Item4 d4) {
-    if (p4->top4 >= MAXTAM) {
-        printf("PILHA CHEIA!\n");
-    } else {
-        p4->vet4[p4->top4] = d4;
-        p4->top4++;
-    }
-}
-
-void PImprime4(Pilha4 *p4) {
+void PImprimeO(PilhaEst *p4) {
      printf("Operadores:\n");
-    for (int j = p4->base4; j <= p4->top4-1; j++)
-        printf("%c\n", p4->vet4[j].val4);
+    for (int j = p4->base; j <= p4->top-1; j++)
+        printf("%c\n", p4->vet[j].val);
     printf("\n");
 }
 
@@ -48,14 +32,11 @@ void PImprime4(Pilha4 *p4) {
 
 void Verifica() {
 
-    Pilha3 p3;
-    Item3 aux3;
-
-    Pilha4 p4;
-    Item4 aux4;
+    PilhaEst p3,p4;
+    ItemEst aux3,aux4;
     
-    FPVazia3(&p3);
-    FPVazia4(&p4);
+    FPEVazia(&p3);
+    FPEVazia(&p4);
 
     char funcao[TAM];
 
@@ -68,29 +49,24 @@ void Verifica() {
     for (int i=0; i < tamanho; i++) {
         if (funcao[i] >= '0' && funcao[i] <= '9') {
             int aux2 = funcao[i] - '0';
-            aux3.val3 = aux2;
-            PUSH3(&p3, aux3);
+            aux3.val = aux2;
+            PUSHE(&p3, aux3);
         }
         else if (funcao[i] == '+' || funcao[i] == '-' || funcao[i] == '*' || funcao[i] == '/') {
             char aux3 = funcao[i];
-            aux4.val4 = aux3;
-            PUSH4(&p4, aux4);
+            aux4.val = aux3;
+            PUSHE(&p4, aux4);
         }
     }
 
-    PImprime3(&p3);
-    PImprime4(&p4);
+    PImprimeI(&p3);
+    PImprimeO(&p4);
 
 }
 
 void iniciaPilha(PILHA *pilha) {
 
     pilha->top = 0;
-}
-
-void iniciaPilha2(PILHA2 *pilha) {
-
-    pilha->top2 = 0;
 }
 
 void PUSH(PILHA *pilha, char valor) {
@@ -107,31 +83,6 @@ char POP(PILHA *pilha) {
     if (!(pilhaVazia(pilha))) {
         c = pilha->dados[pilha->top];
         (pilha->top)--;
-        return c;
-    }
-
-    else
-        return '\0';
-}
-
-void PUSH2(PILHA2 *pilha, char valor) {
-
-    if (!(pilhaCheia2(pilha))) {
-        (pilha->top2)++;
-
-        pilha->dados2[pilha->top2] = valor;
-    }
-}
-
-char POP2(PILHA2 *pilha) {
-
-    char c;
-
-    if (!(pilhaVazia2(pilha))) {
-
-        c = pilha->dados2[pilha->top2];
-        (pilha->top2)--;
-
         return c;
     }
 
@@ -194,7 +145,7 @@ void Posfixo(char infixo[], char posfixo[]) {
 
             else if (operadores(infixo[i])) {
 
-                while (VERDADEIRO) {
+                while (true) {
 
                     top_ch = topoDaPilha(&pilha);
 
@@ -226,7 +177,7 @@ void Posfixo(char infixo[], char posfixo[]) {
 
             else if (infixo[i] == ')') {
 
-                while (VERDADEIRO) {
+                while (true) {
 
                     top_ch = topoDaPilha(&pilha);
 
@@ -263,9 +214,9 @@ int Prefixo(char infixo[], char prefixo[]) {
     int j = 0;
     char top_ch;
 
-    PILHA2 pilha;
+    PILHA pilha;
 
-    iniciaPilha2(&pilha);
+    iniciaPilha(&pilha);
 
     tamanho = strlen(infixo);
 
@@ -273,7 +224,7 @@ int Prefixo(char infixo[], char prefixo[]) {
 
     if (tamanho) {
 
-        PUSH2(&pilha, '(');
+        PUSH(&pilha, '(');
         strcat(infixo, ")");
 
         tamanho++;
@@ -285,14 +236,14 @@ int Prefixo(char infixo[], char prefixo[]) {
             }
 
             else if (infixo[i] == '(') {
-                PUSH2(&pilha, '(');
+                PUSH(&pilha, '(');
             }
 
             else if (operadores(infixo[i])) {
 
-                while (VERDADEIRO) {
+                while (true) {
 
-                    top_ch = topoDaPilha2(&pilha);
+                    top_ch = topoDaPilha(&pilha);
 
                     if (top_ch == '\0') {
                         printf("\nFunção inválida\n");
@@ -304,7 +255,7 @@ int Prefixo(char infixo[], char prefixo[]) {
                         if (operadores(top_ch)) {
 
                             if (prioridadeNivel(top_ch) >= prioridadeNivel(infixo[i]))
-                                prefixo[j--] = POP2(&pilha);
+                                prefixo[j--] = POP(&pilha);
 
                             else
                                 break;
@@ -315,14 +266,14 @@ int Prefixo(char infixo[], char prefixo[]) {
                     }
                 }
 
-                PUSH2(&pilha, infixo[i]);
+                PUSH(&pilha, infixo[i]);
             }
 
             else if (infixo[i] == ')') {
 
-                while (VERDADEIRO) {
+                while (true) {
 
-                    top_ch = topoDaPilha2(&pilha);
+                    top_ch = topoDaPilha(&pilha);
 
                     if (top_ch == '\0') {
                         printf("\nFunçaõ inválida\n");
@@ -333,11 +284,11 @@ int Prefixo(char infixo[], char prefixo[]) {
 
                         if (top_ch != '('){
                             prefixo[j--] = top_ch;
-                            POP2(&pilha);
+                            POP(&pilha);
                         }
 
                         else {
-                            POP2(&pilha);
+                            POP(&pilha);
                             break;
                         }
                     }
@@ -351,14 +302,14 @@ int Prefixo(char infixo[], char prefixo[]) {
     return j;
 }
 
-int operadores(char o) {
+bool operadores(char o) {
 
     if (o == '+' || o == '-' || o == '*' || o == '/' || o == '%' || o == '^') {
-        return VERDADEIRO;
+        return true;
     }
 
     else
-        return FALSO;
+        return false;
 }
 
 int prioridadeNivel(char p) {
@@ -373,18 +324,6 @@ int prioridadeNivel(char p) {
         return 2;
 }
 
-int prioridade(char operador1, char operador2) {
-
-    if (prioridadeNivel(operador1) > prioridadeNivel(operador2))
-        return 1;
-
-    else if (prioridadeNivel(operador1) < prioridadeNivel(operador2))
-        return -1;
-
-    else
-        return 0;
-}
-
 char topoDaPilha(PILHA *pilha) {
 
     if (!(pilhaVazia(pilha)))
@@ -394,49 +333,22 @@ char topoDaPilha(PILHA *pilha) {
         return '\0';
 }
 
-int pilhaVazia(PILHA *pilha) {
+bool pilhaVazia(PILHA *pilha) {
 
     if (pilha->top == -1)
-        return VERDADEIRO;
+        return true;
 
     else
-        return FALSO;
+        return false;
 }
 
-int pilhaCheia(PILHA *pilha) {
+bool pilhaCheia(PILHA *pilha) {
 
     if (pilha->top == 19)
-        return VERDADEIRO;
+        return true;
 
     else
-        return FALSO;
-}
-
-char topoDaPilha2(PILHA2 *pilha) {
-
-    if (!(pilhaVazia2(pilha)))
-        return pilha->dados2[pilha->top2];
-
-    else
-        return '\0';
-}
-
-int pilhaVazia2(PILHA2 *pilha) {
-
-    if (pilha->top2 == -1)
-        return VERDADEIRO;
-
-    else
-        return FALSO;
-}
-
-int pilhaCheia2(PILHA2 *pilha) {
-
-    if (pilha->top2 == 19)
-        return VERDADEIRO;
-
-    else
-        return FALSO;
+        return false;
 }
 
 void result(char posfixo[]) {
