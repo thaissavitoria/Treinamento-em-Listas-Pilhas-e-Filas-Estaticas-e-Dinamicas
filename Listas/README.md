@@ -47,38 +47,39 @@ O programa a seguir apresenta algoritmos baseados de: [Dynamic_List](https://git
 
 Obs.:    
 - O arquivo deve ser dado de maneira:
->a<sub>1</sub><br>
->a<sub>2</sub><br>
->a<sub>3</sub><br>
->a<sub>...</sub><br>
->a<sub>n</sub><br>
->
->onde *a* é um inteiro
+>a<sub>1</sub>    
+>a<sub>2</sub>     
+>a<sub>3</sub>     
+>a<sub>...</sub>        
+>a<sub>n</sub>      
+>     
+>onde *a* é um inteiro    
+
 - Para a opção c e d as listas devem possuir o mesmo tamanho       
 - Para a opção d, k deve ser menor que o tamanho da lista
 
 # Exemplo de Execução
 Numeros.txt:
-> -10
-> -5
-> 8
-> 10
-> 7
-> 9
-> 3
-> 11
-> 13
+> -10     
+> -5     
+> 8     
+> 10    
+> 7     
+> 9     
+> 3    
+> 11    
+> 13    
 
 Numeros2.txt:
-> 1
-> 2
-> 3
-> 4
-> 5
-> 6
-> 7
-> 8
-> 9
+> 1     
+> 2     
+> 3     
+> 4     
+> 5     
+> 6       
+> 7    
+> 8     
+> 9     
 
 Opcao a:
 <p align="center">
