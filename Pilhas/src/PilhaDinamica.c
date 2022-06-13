@@ -30,6 +30,18 @@ void Pop(PilhaDinamica *p, Item *d)
 	free(aux);
 }
 
+void PImprime(PilhaDinamica *p)
+{
+	Block *aux;
+
+	aux = p->top;
+	while (aux != p->base)
+	{
+		printf("%d\n",aux->data.value);
+		aux = aux->prox;
+	}
+}
+
 ///Problema c
 void PreencheP(PilhaDinamica *p)
 {
@@ -81,18 +93,6 @@ void AplicaTotientePilha(PilhaDinamica *p)
 }
 
 ////Problema d
-void PImprime(PilhaDinamica *p)
-{
-	Block *aux;
-
-
-	aux = p->top;
-	while (aux != p->base)
-	{
-		printf("%d\n",aux->data.value);
-		aux = aux->prox;
-	}
-}
 
 void Fibonacci(int num,PilhaDinamica*p)
 {
@@ -125,21 +125,33 @@ void Fibonacci(int num,PilhaDinamica*p)
 			Push(p,num2);
 			Push(p,soma);
 		}
-		printf("\nO Fibonacci de %d é %d.",num,soma.value);
+		printf("\n........Imprimindo a sequência de Fibonnaci do número %d............\n",num);
+		PImprime(p);
 		p->maxnum=num;
 	}
 	else
 	{
-		Block *aux;
+		ImprimePMenor(p,num);
+	}
+}
 
-		aux = p->top;
+void ImprimePMenor(PilhaDinamica*p,int num)
+{
+	Block *aux;
+	int veri;
+	veri=p->maxnum;
 
-		for (int i=p->maxnum;i>num;i--)
+	aux = p->top;
+
+	printf("\n........Imprimindo a sequência de Fibonnaci do número %d............\n",num);
+
+	while (aux != p->base)
+	{
+		if(veri<=num)
 		{
-			aux=aux->prox;
+			printf("%d\n",aux->data.value);
 		}
-
-		printf("\nO Fibonacci de %d é %d.",num,aux->data.value);
-
+		aux = aux->prox;
+		veri--;
 	}
 }

@@ -46,4 +46,5 @@ void AplicaTotientePilha(PilhaDinamica *p);
 
 ///Problema d
 void Fibonacci(int num,PilhaDinamica*p);
+void ImprimePMenor(PilhaDinamica*p,int num);
 #endif
