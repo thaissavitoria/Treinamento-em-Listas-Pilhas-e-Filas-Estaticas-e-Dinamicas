@@ -5,11 +5,9 @@ int main()
 {
 	///Problema c
 	PilhaDinamica p1;
-	FPVazia(&p1);
 
 	///Problema d
 	PilhaDinamica p2;
-	FPVazia(&p2);
 
 	int prob;
 
@@ -18,11 +16,10 @@ int main()
 
 	do{
 	printf("\nQual problema deseja testar? (para sair do programa, digite '0')");
-	printf("\n\t1 - Recebe uma equação matemática e retorna duas pilhas, uma com os operadores e outra com os operandos.");
+	printf("\n\t1 - Recebe uma equação matemática e retorna duas pilhas.");
 	printf("\n\t2 - Apresenta uma operação matemática em notação prefixa e posfixa.");
 	printf("\n\t3 - Mostra primos entre si de cada valor de uma pilha aleatoriamente preenchida com valores de 0 a 99.");
 	printf("\n\t4 - Fibonacci usando pilha.\n");
-	printf("\n\t0 - Sair.\n");
 	printf("\nDigite a opção que deseja: ");
 	scanf("%d",&prob);
 
@@ -38,6 +35,7 @@ int main()
 		break;
 
 	case 3:
+		FPVazia(&p1);
 		PreencheP(&p1);
 
 		printf("\n................Imprimindo Pilha.............\n");
@@ -49,13 +47,11 @@ int main()
 		break;
 
 	case 4:
+		FPVazia(&p2);
 		printf("\nDigite o número do qual deseja saber a sequência Fibonacci:\n");
 		scanf("%d",&num);
-		p2.maxnum=3;
+		p2.maxnum=2;
 		Fibonacci(num,&p2);
-
-		printf("\n................Imprimindo Pilha.............\n");
-		PImprime(&p2);
 
 		int op;
 
@@ -68,8 +64,6 @@ int main()
 				printf("\nDigite o número do qual deseja saber a sequência Fibonacci:\n");
 				scanf("%d",&num);
 				Fibonacci(num,&p2);
-				printf("\n................Imprimindo Pilha.............\n");
-				PImprime(&p2);
 			}
 		}while(op!=0);
 		break;
